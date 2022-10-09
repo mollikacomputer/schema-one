@@ -1,23 +1,20 @@
-const color = require('colors');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv').config();
-const app = require('./app');
 
-// default port
-const port = process.env.PORT || 8080;
+const mongoose = require("mongoose");
+const dotenv = require("dotenv").config();
+const colors = require("colors");
 
+
+
+const app = require("./app");
+
+// database connection
 mongoose.connect(process.env.DATABASE_LOCAL).then(()=>{
-    console.log(`Database connection is successful server file`.red.bold);
-  })
-
-app.listen(port, ()=>{
-    console.log(`Listening to port ${port}`.yellow.bold);
+  console.log(`Database connection successfully`);
 })
 
-// const color = require('colors');
-// const app = require('./app.js');
-// const port = process.env.PORT || 8080;
+// server
+const port = process.env.PORT || 8080;
 
-// app.listen(port, ()=>{
-//     console.log(`Listening to port ${port}`.yellow.bold);
-// })
+app.listen(port, () => {
+  console.log(`App is running on port ${port}`.yellow.bold);
+});
