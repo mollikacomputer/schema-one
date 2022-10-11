@@ -41,9 +41,5 @@ const createDocument = async() =>{
 }
 createDocument();
 
-// app.post('/api/v1/product',(req, res, next)=>{
-//     // console.log('It is working');
-//     // console.log(req.body);
-// });
 
 module.exports = app;
