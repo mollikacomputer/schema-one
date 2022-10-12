@@ -33,6 +33,7 @@ const createDocument = async() =>{
       description:"Pinaple is healty food for our helth",
       price:150
   })
+  // document
  const result = await createAProduct.save();
  console.log(result);
   } catch (error) {
@@ -41,5 +42,5 @@ const createDocument = async() =>{
 }
 createDocument();
 
-
+// end document
 module.exports = app;
